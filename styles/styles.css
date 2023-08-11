@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #ff5400;
+  --color-accent: #525b8d;
+  --color-accent-tint1: #a0a8de;
+  --color-font: #444;
+  --color-white: #fff;
+  --color-background-body: #f3f3f3;
+  --transition: all 0.3s ease-in-out;
+}
