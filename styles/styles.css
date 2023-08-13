@@ -25,26 +25,25 @@ body {
   overflow-x: hidden;
 }
 
-.header {
-  width: 100vw;
-  height: 100vh;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 6rem 6rem 1fr;
-}
-
 .brand__details {
   width: 100%;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 4rem;
   background-color: transparent;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   color: var(--color-white);
-  background-color: var(--color-font);
+  background-color: transparent;
   border-bottom: 1px solid #495057;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 
   & ul {
     display: flex;
@@ -65,6 +64,7 @@ body {
 
 .navbar {
   width: 100%;
+  z-index: 999;
   height: 6rem;
   background-color: transparent;
   display: flex;
@@ -73,17 +73,23 @@ body {
   padding: 2rem 4rem;
   color: var(--color-white);
   font-size: 1.7rem;
+  text-transform: uppercase;
   font-weight: 600;
-  background-color: var(--color-font);
+  background-color: transparent;
+  position: absolute;
+  top: 6rem;
+  left: 0;
 
   & .nav__link {
     color: var(--color-white);
-    font-size: 1.7rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 800;
   }
 
   & .logo {
-    font-size: 2em;
+    font-size: 1.5em;
+    font-weight: 800;
     color: var(--color-white);
   }
 }
@@ -98,16 +104,42 @@ body {
   gap: 3rem;
 }
 
+.header {
+  width: 100vw;
+  height: 100vh;
+}
+
 .hero__slides {
   display: flex;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
 }
 
 #hero--1 {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
     url("/images/front-view-sweet-chocolate-cake.jpg") no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+}
+
+#hero--2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url("/images/fried-spring-rolls-cutting-board.jpg") no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+}
+
+#hero--3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url("/images/assortment-milkshake-glasses-with-fruits-chocolate.jpg")
+      no-repeat;
   background-size: cover;
   background-position: right bottom;
 }
@@ -136,9 +168,10 @@ body {
 
 .order__btn {
   color: var(--color-white);
-  font-size: 1.6rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
   padding: 1rem 2rem;
   background-color: var(--color-primary);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 800;
 }

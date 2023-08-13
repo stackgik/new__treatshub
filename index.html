@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="styles/general--styles.css" />
     <link rel="stylesheet" href="styles/media--queries.css" />
     <link rel="stylesheet" href="styles/styles.css" />
@@ -11,73 +15,71 @@
       src="https://kit.fontawesome.com/ced9a6871b.js"
       crossorigin="anonymous"
     ></script>
-
-    <script defer src="script.js"></script>
   </head>
   <body>
-    <header class="header">
-      <div class="brand__details">
-        <ul class="location__time">
-          <li class="detail">
-            <i class="fa-solid fa-location-dot"></i> Jane Doe's Location
-          </li>
-          <li class="detail">
-            <i class="fa-regular fa-clock"></i> Open Daily: 9am to 6pm
-          </li>
-        </ul>
+    <div class="brand__details">
+      <ul class="location__time">
+        <li class="detail">
+          <i class="fa-solid fa-location-dot"></i> Jane Doe's Location
+        </li>
+        <li class="detail">
+          <i class="fa-regular fa-clock"></i> Open Daily: 9am to 6pm
+        </li>
+      </ul>
 
-        <ul class="contacts">
-          <li class="detail">
-            <i class="fa-solid fa-phone"></i> +234 810 771 3648
-          </li>
-          <li class="detail">
-            <i class="fa-solid fa-envelope"></i> sekonicakes@gmail.com
-          </li>
-        </ul>
-      </div>
+      <ul class="contacts">
+        <li class="detail">
+          <i class="fa-solid fa-phone"></i> +234 810 771 3648
+        </li>
+        <li class="detail">
+          <i class="fa-solid fa-envelope"></i> sekonicakes@gmail.com
+        </li>
+      </ul>
+    </div>
 
-      <nav class="navbar">
-        <a href="#" class="logo">TreatsHub</a>
+    <nav class="navbar">
+      <a href="#" class="logo">TreatsHub</a>
 
-        <ul class="nav__lists">
-          <li class="nav__item">
-            <a href="index.html" class="nav__link">Home</a>
-          </li>
+      <ul class="nav__lists">
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">Home</a>
+        </li>
 
-          <li class="nav__item">
-            <a href="index.html" class="nav__link">Birthday Cakes</a>
-          </li>
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">Birthday Cakes</a>
+        </li>
 
-          <li class="nav__item">
-            <a href="index.html" class="nav__link">Special Cakes</a>
-          </li>
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">Special Cakes</a>
+        </li>
 
-          <li class="nav__item">
-            <a href="index.html" class="nav__link">Food Tray</a>
-          </li>
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">Food Tray</a>
+        </li>
 
-          <li class="nav__item">
-            <a href="index.html" class="nav__link">Pastries</a>
-          </li>
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">Pastries</a>
+        </li>
 
-          <li class="nav__item">
-            <a href="index.html" class="nav__link">Beverages</a>
-          </li>
-        </ul>
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">Beverages</a>
+        </li>
+      </ul>
 
-        <ul class="icon__items">
-          <li class="icon__item">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </li>
+      <ul class="icon__items">
+        <li class="icon__item">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </li>
 
-          <li class="icon__item">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </li>
-        </ul>
-      </nav>
+        <li class="icon__item">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </li>
+      </ul>
+    </nav>
 
-      <div class="hero__slides">
-        <section class="hero" id="hero--1">
+    <header class="header swiper">
+      <div class="hero__slides swiper-wrapper">
+        <section class="hero swiper-slide" id="hero--1">
           <div class="hero__box">
             <h1 class="hero__title">
               Affordable Quality Cakes At Your Doorstep
@@ -121,7 +123,12 @@
             <a href="#" class="order__btn">place order</a>
           </div>
         </section>
+
+        <div class="swiper-pagination"></div>
       </div>
     </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
