@@ -45,29 +45,109 @@
           <a href="index.html" class="nav__link">Home</a>
         </li>
 
-        <li class="nav__item">
+        <li class="nav__item menu__options" id="birthday__cakes">
           <a href="index.html" class="nav__link"
             >Birthday Cakes <i class="fa-solid fa-angle-down"></i
           ></a>
+
+          <ul class="nav__item--submenu">
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Fondant Cakes</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Buttercream Cakes</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Fruit Cakes</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Cupcakes</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Dessert</a>
+            </li>
+          </ul>
         </li>
 
-        <li class="nav__item">
-          <a href="index.html" class="nav__link">Special Cakes</a>
+        <li class="nav__item menu__options" id="special__cakes">
+          <a href="index.html" class="nav__link"
+            >Special Cakes <i class="fa-solid fa-angle-down"></i
+          ></a>
+
+          <ul class="nav__item--submenu">
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Wedding Cakes</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Corporate Cakes</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Valentine Cakes</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Cake Paffait</a>
+            </li>
+          </ul>
         </li>
 
-        <li class="nav__item">
-          <a href="index.html" class="nav__link">Food Tray</a>
+        <li class="nav__item menu__options" id="food__tray">
+          <a href="index.html" class="nav__link"
+            >Food Tray <i class="fa-solid fa-angle-down"></i
+          ></a>
+
+          <ul class="nav__item--submenu">
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Budget Trays</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Special Trays</a>
+            </li>
+          </ul>
         </li>
 
-        <li class="nav__item">
-          <a href="index.html" class="nav__link">Pastries</a>
+        <li class="nav__item menu__options" id="pastries">
+          <a href="index.html" class="nav__link"
+            >Pastries <i class="fa-solid fa-angle-down"></i
+          ></a>
+
+          <ul class="nav__item--submenu">
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Meat Pies</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Chicken Pies</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Spicy Puff-Puff</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Jam Doughnuts</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Small Chops</a>
+            </li>
+          </ul>
         </li>
 
-        <li class="nav__item">
-          <a href="index.html" class="nav__link">Beverages</a>
-        </li>
+        <li class="nav__item menu__options" id="beverages">
+          <a href="index.html" class="nav__link"
+            >Beverages <i class="fa-solid fa-angle-down"></i
+          ></a>
+          
+        <ul class="nav__item--submenu">
+          <li class="submenu__item">
+            <a href="#" class="submenu__link">Hibiscus Drink</a>
+          </li>
+          <li class="submenu__item">
+            <a href="#" class="submenu__link">Soyabean Drink</a>
+          </li>
+          <li class="submenu__item">
+            <a href="#" class="submenu__link">Smoothie</a>
+          </li>
+        </ul>
       </ul>
-
+    </li>
+      
       <ul class="icon__items">
         <li class="icon__item">
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -80,7 +160,7 @@
     </nav>
 
     <header class="header">
-      <div class="swiper hero__section">
+      <div class="swiper hero__section section__box">
         <div class="swiper-wrapper hero__slides">
           <section class="swiper-slide hero" id="hero--1">
             <div class="hero__box">
@@ -94,7 +174,7 @@
                 Eum quod animi ipsa unde pariatur saepe ipsam praesentium
                 officia!
               </p>
-              <a href="#" class="order__btn">place order</a>
+              <a href="#" class="btn order__btn">place order</a>
             </div>
           </section>
 
@@ -110,7 +190,7 @@
                 Eum quod animi ipsa unde pariatur saepe ipsam praesentium
                 officia!
               </p>
-              <a href="#" class="order__btn">place order</a>
+              <a href="#" class="btn order__btn">place order</a>
             </div>
           </section>
 
@@ -126,12 +206,10 @@
                 Eum quod animi ipsa unde pariatur saepe ipsam praesentium
                 officia!
               </p>
-              <a href="#" class="order__btn">place order</a>
+              <a href="#" class="btn order__btn">place order</a>
             </div>
           </section>
 
-          <!-- <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div> -->
         </div>
         <div class="swiper-pagination"></div>
         <div class="autoplay-progress">
@@ -142,6 +220,264 @@
         </div>
       </div>
     </header>
+
+
+    <section class="section__about">
+      <div class="section__wrapper">
+        <div class="section__content">
+          <img src="images/jar cake.jpg" alt="a picture of a jar cake" class="jar--cake">
+          <img src="images/smoothie.jpg" alt="a picture of a smoothie" class="smoothie">
+          <img src="images/spring rolls and cocktail.jpg" alt="a picture of spring rolls and a cocktail with lime wedge" class="springroll">
+
+          <div class="about__us">
+            <h2 class="section__heading">About Treatshub</h2>
+            <h1 class="section__title">Love at First Bite & Gulp</h1>
+            <p class="section__details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, a? Sapiente itaque doloribus error maxime iste placeat accusantium animi ullam, fuga quidem modi impedit amet, at repudiandae est, autem facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illo molestias mollitia pariatur dolorem inventore minima maiores reiciendis praesentium delectus sint, necessitatibus architecto enim atque facere provident voluptate quod eaque?</p>
+
+            <span class="call__order--text">Place order through call</span>
+            <span class="call__order--number">+234 810 771 3648</span>
+            <div class="about__us--link">
+              <a href="#" class="btn read__more--btn">read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section__special__treat">
+      <div class="special__treat">
+        <div class="treats__details">
+          <h2 class="section__heading left__align">special treat</h2>
+          <h1 class="section__title left__align flex">
+            <img src="images/badge.png" alt="badge" class="badge">
+            <span>Food Tray</span>
+          </h1>
+          <p class="section__details left__align">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id explicabo ratione et architecto ex voluptatibus animi sapiente eum voluptates inventore suscipit perspiciatis, esse magni nobis quod minus quam unde ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam error repudiandae sapiente exercitationem nesciunt culpa natus, earum beatae velit voluptatibus quia reiciendis vel incidunt officia porro facilis quam debitis eaque.</p>
+          <p class="prices left__align"><span class="price">&#8358;46,000</span><span class="discounted__price">&#8358;35,000</span></p>
+          <a href="#" class="btn order__btn">place order</a>
+        </div>
+
+        <div class="food__tray--wrapper">
+          <img src="images/food tray.jpg" alt="" class="food__tray">
+        </div>
+      </div>
+    </section>
+
+    <!-- Treats Section Starts Here -->
+    <section class="section__treats">
+      <h2 class="section__heading">treats menu</h2>
+
+      <!-- treats content tabs starts-->
+      <ul class="treats__menu">
+        <li class="treats__item treats__item--active" data-item="1">birthday cakes</li>
+        <li class="treats__item" data-item="2">special cakes</li>
+        <li class="treats__item" data-item="3">pastries</li>
+        <li class="treats__item" data-item="4">baverages</li>
+
+        <div class="line"></div>
+      </ul>
+      <!-- treats content tabs ends-->
+
+        <!-- Birthday Cakes Section Ends Here -->
+      <div class="swiper section__container  section__container--1 section__container--active swiper1">
+        <div class="swiper-wrapper section__image__wrapper">
+          <article class="swiper-slide article">
+            <figure>
+              <img src="images/birthday cakes/aneta-pawlik-d8s13D29QiE-unsplash.jpg" alt="birthday cake" class="image">
+            </figure>
+            <figcaption>
+              <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+              <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+            </figcaption>
+            <a href="#" class="btn order__btn full__stretch">place order</a>
+          </article>
+
+          <article class="swiper-slide article">
+            <figure>
+              <img src="images/birthday cakes/annie-spratt-_4iLsr5p-dY-unsplash.jpg" alt="birthday cake" class="image">
+            </figure>
+            <figcaption>
+              <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+              <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+            </figcaption>
+            <a href="#" class="btn order__btn full__stretch">place order</a>
+          </article>
+
+          <article class="swiper-slide article">
+            <figure>
+              <img src="images/birthday cakes/becky-fantham-GFEB4k3efmU-unsplash.jpg" alt="birthday cake" class="image">
+            </figure>
+            <figcaption>
+              <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+              <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+            </figcaption>
+            <a href="#" class="btn order__btn full__stretch">place order</a>
+          </article>
+
+          <article class="swiper-slide article">
+            <figure>
+              <img src="images/birthday cakes/caitlyn-de-wild-3ebnx99T1F4-unsplash.jpg" alt="birthday cake" class="image">
+            </figure>
+            <figcaption>
+              <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+              <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+            </figcaption>
+            <a href="#" class="btn order__btn full__stretch">place order</a>
+          </article>
+
+          <article class="swiper-slide article">
+            <figure>
+              <img src="images/birthday cakes/christopher-martyn-_-ZzWO4jlRE-unsplash.jpg" alt="birthday cake" class="image">
+            </figure>
+            <figcaption>
+              <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+              <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+            </figcaption>
+            <a href="#" class="btn order__btn full__stretch">place order</a>
+          </article>
+
+          <article class="swiper-slide article">
+            <figure>
+              <img src="images/birthday cakes/city-church-christchurch-qy__yBHYeYo-unsplash.jpg" alt="birthday cake" class="image">
+            </figure>
+            <figcaption>
+              <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+              <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+            </figcaption>
+            <a href="#" class="btn order__btn full__stretch">place order</a>
+          </article>
+
+          <article class="swiper-slide article">
+            <figure>
+              <img src="images/birthday cakes/dade-j-EtID5_V4hlY-unsplash.jpg" alt="birthday cake" class="image">
+            </figure>
+            <figcaption>
+              <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+              <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+            </figcaption>
+            <a href="#" class="btn order__btn full__stretch">place order</a>
+          </article>
+
+          <article class="swiper-slide article">
+            <figure>
+              <img src="images/birthday cakes/danny-kang-emjI0oAAZGg-unsplash.jpg" alt="birthday cake" class="image">
+            </figure>
+            <figcaption>
+              <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+              <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+            </figcaption>
+            <a href="#" class="btn order__btn full__stretch">place order</a>
+          </article>
+        </div>
+
+        <div class="all__cakes">
+          <a href="#" class="btn order__btn">see all birthday cakes</a>
+        </div>
+      </div>
+      <!-- Birthday Cakes Section Ends Here -->
+
+
+
+    <!-- Special Cakes Section Starts Here -->
+    <div class="swiper section__container section__container--2 swiper1">
+      <div class="swiper-wrapper section__image__wrapper">
+        <article class="swiper-slide article">
+          <figure>
+            <img src="images/birthday cakes/aneta-pawlik-d8s13D29QiE-unsplash.jpg" alt="birthday cake" class="image">
+          </figure>
+          <figcaption>
+            <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+            <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+          </figcaption>
+          <a href="#" class="btn order__btn full__stretch">place order</a>
+        </article>
+
+        <article class="swiper-slide article">
+          <figure>
+            <img src="images/birthday cakes/annie-spratt-_4iLsr5p-dY-unsplash.jpg" alt="birthday cake" class="image">
+          </figure>
+          <figcaption>
+            <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+            <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+          </figcaption>
+          <a href="#" class="btn order__btn full__stretch">place order</a>
+        </article>
+
+        <article class="swiper-slide article">
+          <figure>
+            <img src="images/birthday cakes/becky-fantham-GFEB4k3efmU-unsplash.jpg" alt="birthday cake" class="image">
+          </figure>
+          <figcaption>
+            <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+            <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+          </figcaption>
+          <a href="#" class="btn order__btn full__stretch">place order</a>
+        </article>
+
+        <article class="swiper-slide article">
+          <figure>
+            <img src="images/birthday cakes/caitlyn-de-wild-3ebnx99T1F4-unsplash.jpg" alt="birthday cake" class="image">
+          </figure>
+          <figcaption>
+            <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+            <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+          </figcaption>
+          <a href="#" class="btn order__btn full__stretch">place order</a>
+        </article>
+
+        <article class="swiper-slide article">
+          <figure>
+            <img src="images/birthday cakes/christopher-martyn-_-ZzWO4jlRE-unsplash.jpg" alt="birthday cake" class="image">
+          </figure>
+          <figcaption>
+            <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+            <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+          </figcaption>
+          <a href="#" class="btn order__btn full__stretch">place order</a>
+        </article>
+
+        <article class="swiper-slide article">
+          <figure>
+            <img src="images/birthday cakes/city-church-christchurch-qy__yBHYeYo-unsplash.jpg" alt="birthday cake" class="image">
+          </figure>
+          <figcaption>
+            <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+            <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+          </figcaption>
+          <a href="#" class="btn order__btn full__stretch">place order</a>
+        </article>
+
+        <article class="swiper-slide article">
+          <figure>
+            <img src="images/birthday cakes/dade-j-EtID5_V4hlY-unsplash.jpg" alt="birthday cake" class="image">
+          </figure>
+          <figcaption>
+            <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+            <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+          </figcaption>
+          <a href="#" class="btn order__btn full__stretch">place order</a>
+        </article>
+
+        <article class="swiper-slide article">
+          <figure>
+            <img src="images/birthday cakes/danny-kang-emjI0oAAZGg-unsplash.jpg" alt="birthday cake" class="image">
+          </figure>
+          <figcaption>
+            <p class="cake__description">Buttercream Cake With Birthday Light Candles</p>
+            <p class="cake__price">&#8358;10,000 &mdash; &#8358;40,000</p>
+          </figcaption>
+          <a href="#" class="btn order__btn full__stretch">place order</a>
+        </article>
+      </div>
+
+      <div class="all__cakes">
+        <a href="#" class="btn order__btn">see all special cakes</a>
+      </div>
+    </div>
+    <!-- Special Cakes Section Ends Here -->
+    </section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="script.js"></script>

@@ -13,7 +13,10 @@
   --color-dark-gray: #212529;
   --color-white: #fff;
   --color-background-body: #f3f3f3;
-  --transition: all 0.3s ease-in-out;
+  --transition: all 0.3s linear;
+  --border-black: 1px solid #212529;
+  --border-primary: 3px solid #ff5400;
+  --scale: scale(1.1);
 }
 
 html {
@@ -22,6 +25,7 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
+  background-color: #f1f3f5;
   overflow-x: hidden;
 }
 
@@ -33,13 +37,13 @@ body {
   align-items: center;
   padding: 2rem 4rem;
   background-color: transparent;
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--color-white);
   background-color: transparent;
-  border-bottom: 1px solid #495057;
+  border-bottom: var(--border);
 
   position: absolute;
   top: 0;
@@ -59,7 +63,7 @@ body {
 }
 
 .detail:not(:last-child) {
-  border-right: 1px solid var(--color-white);
+  border-right: var(--border);
 }
 
 .navbar {
@@ -96,7 +100,76 @@ body {
 
 .nav__lists {
   display: flex;
-  gap: 8rem;
+  gap: 3.5rem;
+}
+
+.nav__link {
+  transition: var(--transition);
+}
+
+.nav__link:is(:link, :visited) {
+  color: var(--color-white);
+}
+
+.nav__item {
+  padding: 1rem 2rem;
+  transition: var(--transition);
+}
+
+#birthday__cakes,
+#special__cakes,
+#food__tray,
+#pastries,
+#beverages {
+  position: relative;
+}
+
+.nav__item--submenu {
+  z-index: 999;
+  position: absolute;
+  top: 105%;
+  background-color: transparent;
+  border: 1px solid var(--color-font);
+  width: 200px;
+  transition: var(--transition);
+  transform: translateX(-2rem);
+
+  display: none;
+  /* visibility: none;
+  opacity: 0; */
+}
+
+.nav__item:hover .nav__item--submenu {
+  /* visibility: visible;
+  opacity: 1; */
+  display: block;
+}
+
+.nav__link i {
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.menu__options:hover .nav__link i {
+  transform: rotate(180deg);
+}
+
+.submenu__item {
+  display: block;
+  text-align: left;
+  padding: 1rem 2rem;
+  transition: var(--transition);
+}
+
+.submenu__item:hover,
+.nav__item:hover {
+  background-color: var(--color-font);
+}
+
+.submenu__item > *:is(:link, :visited) {
+  color: var(--color-white);
+  font-size: 1.4rem;
+  font-weight: 800;
 }
 
 .icon__items {
@@ -110,8 +183,8 @@ body {
 }
 
 .hero__section {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .hero__slides {
@@ -169,12 +242,7 @@ body {
 
 .order__btn {
   color: var(--color-white);
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  padding: 1rem 2rem;
   background-color: var(--color-primary);
-  text-transform: uppercase;
-  font-weight: 800;
 }
 
 .swiper-pagination-bullet {
@@ -215,4 +283,259 @@ body {
   stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
+}
+
+.section__about {
+  width: 100%;
+  padding: 0 6rem;
+  margin-top: 16rem;
+}
+
+.section__wrapper {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+/* .brandname {
+  color: var(--color-primary);
+} */
+
+.section__content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30rem 30rem 1fr;
+  grid-template-rows: 28rem 28rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.section__content img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.smoothie {
+  grid-column: 1/2;
+  grid-row: 1 / span 2;
+}
+
+.jar--cake {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.springroll {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.about__us {
+  grid-row: 1 / span 2;
+  align-self: center;
+  justify-self: center;
+  font-size: 1.5rem;
+  color: var(--color-font);
+}
+
+.call__order--text {
+  font-weight: 700;
+  display: block;
+  text-align: center;
+}
+
+.call__order--number {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  display: block;
+  text-align: center;
+}
+
+.about__us--link {
+  text-align: center;
+}
+
+.read__more--btn {
+  display: inline-block;
+  color: var(--color-primary);
+  padding: 2px 0;
+  border-bottom: var(--border-primary);
+}
+
+.section__special__treat {
+  margin-top: 16rem;
+  width: 100%;
+  padding: 3rem 6rem;
+  background-color: #343a40;
+  color: #fff;
+}
+
+.left__align {
+  text-align: left;
+}
+
+.special__treat {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 110rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+}
+
+.treats__details {
+  align-self: center;
+}
+
+.badge {
+  width: 6.2rem;
+  aspect-ratio: 1/1;
+}
+
+.prices {
+  margin-bottom: 7rem;
+}
+
+.price {
+  font-size: 1.7rem;
+  color: #adb5bd;
+  text-decoration: line-through;
+  padding-right: 1rem;
+}
+
+.discounted__price {
+  font-size: 3rem;
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.food__tray--wrapper {
+  overflow: hidden;
+}
+
+.food__tray {
+  width: 100%;
+  transition: var(--transition);
+}
+
+.food__tray:hover {
+  transform: var(--scale);
+}
+
+.section__treats {
+  width: 100%;
+  padding: 0 6rem;
+  margin-top: 16rem;
+}
+
+.treats__menu {
+  width: 100%;
+  max-width: 130rem;
+  margin: 0 auto 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  text-transform: uppercase;
+  color: var(--color-font);
+  font-size: 1.3rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ced4de;
+  font-family: inherit;
+  font-weight: 700;
+  position: relative;
+}
+
+.treats__item {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.treats__item--active {
+  color: var(--color-primary);
+}
+
+.line {
+  content: "";
+  width: 114px;
+  height: 2px;
+  border-radius: 5px 5px 0 0;
+  background-color: var(--color-primary);
+  position: absolute;
+  left: 411px;
+  top: calc(100% - 1px);
+  transition: var(--transition);
+}
+
+.section__container {
+  width: 100%;
+  max-width: 130rem;
+  margin: 0 auto;
+  display: none;
+}
+
+.section__container--active {
+  display: block;
+}
+
+.section__image__wrapper {
+  width: 100%;
+}
+
+.article {
+  width: 30rem;
+  padding-bottom: 2rem 0;
+  background-color: var(--color-white);
+  border-top: var(--border-primary);
+}
+
+.article:hover .image {
+  transform: var(--scale);
+}
+
+figure {
+  width: 100%;
+  height: 30rem;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: var(--transition);
+}
+
+figcaption {
+  display: block;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
+.cake__description {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.cake__price {
+  font-weight: 800;
+  margin-top: 1rem;
+  color: var(--color-primary);
+}
+
+.btn.full__stretch {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.all__cakes {
+  margin-top: 8rem;
+  text-align: center;
 }
