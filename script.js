@@ -24,11 +24,17 @@ const heroSection = new Swiper(".hero__section", {
   grabCursor: true,
 });
 
-const birthdayCakes = new Swiper(".swiper1", {
+// Treats swiper
+const treats = new Swiper(".swiper1", {
   slidesPerView: "auto",
   spaceBetween: 20,
   navigation: true,
   grabCursor: true,
+
+  navigation: {
+    nextEl: ".treats-next__arrow",
+    prevEl: ".treats-button-prev",
+  },
 });
 
 // ? Script for the treats menu functionality
@@ -61,4 +67,23 @@ treatsMenu.addEventListener("click", (e) => {
     .classList.add("section__container--active");
 
   clicked.classList.add("treats__item--active");
+});
+
+// Swiper for Testimonials
+const testimonials = new Swiper(".wrapper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  navigation: {
+    nextEl: ".testimonial-next__arrow",
+    prevEl: ".testimonial-prev__arrow",
+  },
 });
