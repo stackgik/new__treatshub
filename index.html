@@ -41,21 +41,31 @@
       </ul>
     </div>
 
+    <!-- primary navigation section -->
     <nav class="primary__navigation">
       <a href="#" class="logo" aria-label="home">TreatsHub</a>
 
       <ul class="nav__lists">
-        <li class="nav__item">
-          <a href="index.html" class="nav__link">Home</a>
+        <li class="nav__item" data-page="home">
+          <a href="index.html" class="nav__link nav__link--home link--active"
+            >Home</a
+          >
         </li>
 
-        <li class="nav__item menu__options" id="birthday__cakes">
-          <a class="nav__link">
+        <li
+          class="nav__item menu__options"
+          id="birthday__cakes"
+          data-page="birthday-cakes"
+        >
+          <a class="nav__link nav__link--birthday-cakes">
             Birthday Cakes
-            <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+            <i
+              class="fa-solid fa-angle-down icon--birthday-cakes"
+              aria-hidden="true"
+            ></i>
           </a>
 
-          <ul class="nav__item--submenu">
+          <ul class="submenu submenu--birthday-cakes visually-hidden">
             <li class="submenu__item">
               <a href="#" class="submenu__link">Fondant Cakes</a>
             </li>
@@ -74,13 +84,20 @@
           </ul>
         </li>
 
-        <li class="nav__item menu__options" id="special__cakes">
-          <a class="nav__link">
+        <li
+          class="nav__item menu__options"
+          id="special__cakes"
+          data-page="special-cakes"
+        >
+          <a class="nav__link nav__link--special-cakes">
             Special Cakes
-            <i class="fa-solid fa-angle-down" aria-hidden="true"></i
+            <i
+              class="fa-solid fa-angle-down icon--special-cakes"
+              aria-hidden="true"
+            ></i
           ></a>
 
-          <ul class="nav__item--submenu">
+          <ul class="submenu submenu--special-cakes visually-hidden">
             <li class="submenu__item">
               <a href="#" class="submenu__link">Wedding Cakes</a>
             </li>
@@ -96,12 +113,20 @@
           </ul>
         </li>
 
-        <li class="nav__item menu__options" id="food__tray">
-          <a class="nav__link"
-            >Food Tray <i class="fa-solid fa-angle-down" aria-hidden="true"></i
+        <li
+          class="nav__item menu__options"
+          id="food__tray"
+          data-page="food-tray"
+        >
+          <a class="nav__link nav__link--food-tray"
+            >Food Tray
+            <i
+              class="fa-solid fa-angle-down icon--food-tray"
+              aria-hidden="true"
+            ></i
           ></a>
 
-          <ul class="nav__item--submenu">
+          <ul class="submenu submenu--food-tray visually-hidden">
             <li class="submenu__item">
               <a href="#" class="submenu__link">Budget Trays</a>
             </li>
@@ -111,12 +136,16 @@
           </ul>
         </li>
 
-        <li class="nav__item menu__options" id="pastries">
-          <a class="nav__link"
-            >Pastries <i class="fa-solid fa-angle-down" aria-hidden="true"></i
+        <li class="nav__item menu__options" id="pastries" data-page="pastries">
+          <a class="nav__link nav__link--pastries"
+            >Pastries
+            <i
+              class="fa-solid fa-angle-down icon--pastries"
+              aria-hidden="true"
+            ></i
           ></a>
 
-          <ul class="nav__item--submenu">
+          <ul class="submenu submenu--pastries visually-hidden">
             <li class="submenu__item">
               <a href="#" class="submenu__link">Meat Pies</a>
             </li>
@@ -135,12 +164,20 @@
           </ul>
         </li>
 
-        <li class="nav__item menu__options" id="beverages">
-          <a class="nav__link"
-            >Beverages <i class="fa-solid fa-angle-down" aria-hidden="true"></i
+        <li
+          class="nav__item menu__options"
+          id="beverages"
+          data-page="beverages"
+        >
+          <a class="nav__link nav__link--beverages"
+            >Beverages
+            <i
+              class="fa-solid fa-angle-down icon--beverages"
+              aria-hidden="true"
+            ></i
           ></a>
 
-          <ul class="nav__item--submenu">
+          <ul class="submenu submenu--beverages visually-hidden">
             <li class="submenu__item">
               <a href="#" class="submenu__link">Hibiscus Drink</a>
             </li>
@@ -173,7 +210,7 @@
               <h1 class="hero__title">
                 Affordable Quality Cakes At Your Doorstep
               </h1>
-              <p class="hero__title--details">
+              <p class="hero__details">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Incidunt provident deserunt quia, perspiciatis aspernatur
                 distinctio facilis! Ratione, repudiandae. Inventore, voluptatum.
@@ -189,7 +226,7 @@
               <h1 class="hero__title">
                 Affordable Quality Cakes At Your Doorstep
               </h1>
-              <p class="hero__title--details">
+              <p class="hero__details">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Incidunt provident deserunt quia, perspiciatis aspernatur
                 distinctio facilis! Ratione, repudiandae. Inventore, voluptatum.
@@ -205,7 +242,7 @@
               <h1 class="hero__title">
                 Affordable Quality Cakes At Your Doorstep
               </h1>
-              <p class="hero__title--details">
+              <p class="hero__details">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Incidunt provident deserunt quia, perspiciatis aspernatur
                 distinctio facilis! Ratione, repudiandae. Inventore, voluptatum.
@@ -270,7 +307,7 @@
         </div>
       </section>
 
-      <section class="section__special__treat">
+      <section class="section section__special__treat">
         <div class="special__treat">
           <div class="treats__details">
             <h2 class="section__heading left__align">special treat</h2>

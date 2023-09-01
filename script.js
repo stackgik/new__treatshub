@@ -45,7 +45,6 @@ const treatsMenu = document.querySelector(".treats__menu"),
 
 treatsMenu.addEventListener("click", (e) => {
   const clicked = e.target.closest(".treats__item");
-  console.log(clicked);
 
   // Guard Clause
   if (!clicked) return;
@@ -86,4 +85,40 @@ const testimonials = new Swiper(".wrapper", {
     nextEl: ".testimonial-next__arrow",
     prevEl: ".testimonial-prev__arrow",
   },
+});
+
+// ! Functionality to handle navigation
+
+const menu = document.querySelector(".nav__lists"),
+  navItems = document.querySelectorAll(".nav__item"),
+  navLinks = document.querySelectorAll(".nav__link"),
+  submenus = document.querySelectorAll(".submenu"),
+  linkIcons = document.querySelectorAll(".nav__link i");
+
+menu.addEventListener("click", (event) => {
+  const clicked = event.target.closest(".nav__item");
+
+  // using the guard clause
+  if (!clicked) return;
+
+  // doing general resetting
+  navLinks.forEach((navLink) => navLink.classList.remove("link--active"));
+  submenus.forEach((submenu) => submenu.classList.remove("submenu--active"));
+  linkIcons.forEach((icon) => icon.classList.remove("link--active"));
+  linkIcons.forEach((icon) => (icon.style.transform = "rotate(0)"));
+
+  // selecting and adding the necessary classes
+  const clickedLink = document.querySelector(
+    `.nav__link--${clicked.dataset.page}`
+  );
+  clickedLink.classList.toggle("link--active");
+
+  const showSubmenu = document.querySelector(
+    `.submenu--${clicked.dataset.page}`
+  );
+  showSubmenu.classList.toggle("submenu--active");
+
+  const rotateIcon = document.querySelector(`.icon--${clicked.dataset.page}`);
+  rotateIcon.classList.toggle("link--active");
+  rotateIcon.style.transform = "rotate(180deg)";
 });

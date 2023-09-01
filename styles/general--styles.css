@@ -57,6 +57,7 @@ button {
   line-height: 1.2;
   margin-bottom: 2rem;
   text-align: center;
+  font-weight: 800;
 }
 
 .section__details {

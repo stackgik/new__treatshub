@@ -2,10 +2,16 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500&display=swap");
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  font: inherit;
 }
 
 :root {
@@ -33,7 +39,7 @@
   --generic-gradient--1: hsl(18, 18%, 28%);
   --generic-gradient--2: hsl(273, 31%, 46%);
   --generic-gradient--3: hsl(203, 30%, 26%);
-  --line-height: 1.6;
+  --line-height: 1.7;
   --visually-hidden: none;
 }
 
@@ -107,32 +113,33 @@ body {
     font-weight: 800;
     color: var(--color-white);
   }
+}
 
-  & .nav__lists {
-    display: flex;
-    gap: 3.5rem;
+.nav__lists {
+  display: flex;
+  gap: 3.5rem;
+}
 
-    & .nav__item {
-      padding: 1rem 2rem;
-      transition: var(--transition);
+.nav__item {
+  padding: 1rem 2rem;
+  transition: var(--transition);
+}
 
-      & .nav__link {
-        color: var(--color-white);
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        font-weight: 800;
-        transition: var(--transition);
-      }
+.nav__link {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  transition: var(--transition);
+  cursor: pointer;
+}
 
-      & :is(:link, :visited) {
-        color: var(--color-white);
-      }
+:is(:link, :visited) {
+  color: var(--color-white);
+}
 
-      & :is(:hover, :active) {
-        color: var(--color-gray--300);
-      }
-    }
-  }
+:is(:hover, :active) {
+  color: var(--color-gray--300);
 }
 
 #birthday__cakes,
@@ -143,7 +150,7 @@ body {
   position: relative;
 }
 
-.nav__item--submenu {
+.submenu {
   z-index: 999;
   position: absolute;
   top: 105%;
@@ -151,20 +158,11 @@ body {
   width: 200px;
   transition: var(--transition);
   transform: translateX(-2rem);
-  display: var(--visually-hidden);
-}
-
-.nav__item:hover .nav__item--submenu {
-  display: block;
 }
 
 .nav__link i {
   font-size: 1rem;
   transition: var(--transition);
-}
-
-.menu__options:hover .nav__link i {
-  transform: rotate(180deg);
 }
 
 .submenu__item {
@@ -182,6 +180,18 @@ body {
   color: var(--color-white);
   font-size: 1.2rem;
   font-weight: 800;
+}
+
+.link--active {
+  color: var(--color-gray--300);
+}
+
+.visually-hidden {
+  display: var(--visually-hidden);
+}
+
+.submenu--active {
+  display: block;
 }
 
 .icon__items {
@@ -256,9 +266,10 @@ body {
 .hero__title {
   font-size: 4.4rem;
   margin-bottom: 2rem;
+  font-weight: 800;
 }
 
-.hero__title--details {
+.hero__details {
   font-size: 1.7rem;
   line-height: var(--line-height);
   margin-bottom: 8rem;
@@ -390,8 +401,6 @@ body {
 }
 
 .section__special__treat {
-  margin-top: 16rem;
-  width: 100%;
   padding: 3rem 6rem;
   background-color: var(--color-gray--700);
   color: var(--color-white);
@@ -655,6 +664,7 @@ figcaption {
     font-size: 4.4rem;
     color: inherit;
     text-align: center;
+    font-weight: 800;
   }
 
   & .form__text {
@@ -714,7 +724,7 @@ figcaption {
         right: 2rem;
         top: 1.5rem;
         font-size: 1.4rem;
-        color: black;
+        color: var(--color-gray--300);
         transform: translateY(50%);
       }
     }
