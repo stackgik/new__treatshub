@@ -1022,6 +1022,8 @@ figcaption {
 
 .page__intro {
   margin: 20rem auto 5rem;
+  width: 100%;
+  max-width: 130rem;
 }
 
 .general__box {
@@ -1086,4 +1088,7 @@ figcaption {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 2rem;
   row-gap: 4rem;
+  width: 100%;
+  max-width: 130rem;
+  margin: 0 auto;
 }
