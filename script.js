@@ -37,7 +37,7 @@ const treats = new Swiper(".swiper1", {
   },
 });
 
-// ? Script for the treats menu functionality
+// ! Script for the treats menu functionality
 const treatsMenu = document.querySelector(".treats__menu"),
   treatsItems = document.querySelectorAll(".treats__item"),
   sectionContainers = document.querySelectorAll(".section__container"),
