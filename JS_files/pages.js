@@ -43,6 +43,7 @@ menu.addEventListener("click", (event) => {
   // If not open, add these classes
   if (!isLinkActive) {
     // adding the necessary classes if the link isn't already active
+    resetLinks();
     clickedLink.classList.add("link--active");
     showSubmenu.classList.add("submenu--active");
     rotateIcon.classList.add("link--active");
@@ -56,4 +57,28 @@ body.addEventListener("click", (event) => {
   if (!event.target.closest(".nav__item")) {
     resetLinks();
   }
+});
+
+// functionality for the pagination
+let currentPage = 1;
+
+const paginationLists = document.querySelectorAll(".pagination__list"),
+  pagination = document.querySelector(".pagination");
+
+pagination.addEventListener("click", (event) => {
+  const clicked = event.target.closest(".pagination__list");
+  const clickedLink = clicked.querySelector(".page");
+
+  if (clickedLink.classList.contains("previous__page") && currentPage > 1) {
+    currentPage--;
+    clickedLink.href = `/pages/products/birthday-cakes/page_${currentPage}.html`;
+  }
+
+  if (clickedLink.classList.contains("next__page") && currentPage < 3) {
+    currentPage++;
+    console.log(clickedLink.innerText);
+    clickedLink.href = `/pages/products/birthday-cakes/page_${currentPage}.html`;
+  }
+
+  clickedLink.href = `/pages/products/birthday-cakes/page_${clicked.dataset.page}.html`;
 });

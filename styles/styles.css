@@ -51,6 +51,7 @@ body {
   font-family: "Nunito", sans-serif;
   background-color: var(--color-gray--100);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .brand__details {
@@ -172,14 +173,15 @@ body {
   transition: var(--transition);
 }
 
-.submenu__link:hover {
-  color: var(--color-gray--300);
-}
-
-.submenu__item > *:is(:link, :visited) {
+.submenu__link:is(:link, :visited) {
   color: var(--color-white);
   font-size: 1.2rem;
   font-weight: 800;
+  transition: var(--transition);
+}
+
+.submenu__link:hover {
+  color: var(--color-gray--300);
 }
 
 .visually-hidden {
@@ -1091,4 +1093,34 @@ figcaption {
   width: 100%;
   max-width: 130rem;
   margin: 0 auto;
+}
+
+.submenu--page {
+  background-color: var(--color-gradient-500);
+  top: calc(100% + 1rem);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 20px; */
+  border: 1px solid var(--color-gray--300);
+  max-width: fit-content;
+  margin: 10rem auto 0;
+  padding: 0 1rem;
+  gap: 4rem;
+
+  & .page {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: inherit;
+    display: flex;
+    align-items: center;
+  }
+}
+
+& .pagination__list {
+  padding: 1rem;
 }

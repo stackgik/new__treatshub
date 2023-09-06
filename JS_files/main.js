@@ -130,6 +130,7 @@ menu.addEventListener("click", (event) => {
   // If not open, add these classes
   if (!isLinkActive) {
     // adding the necessary classes if the link isn't already active
+    resetLinks();
     clickedLink.classList.add("link--active");
     showSubmenu.classList.add("submenu--active");
     rotateIcon.classList.add("link--active");
