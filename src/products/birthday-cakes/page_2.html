@@ -633,53 +633,56 @@
         </article>
       </section>
 
-      <ul class="pagination">
-        <li class="pagination__list">
-          <a href="#" class="page previous__page"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              class="page__icon"
-              aria-hidden="true"
-            >
-              <path
-                fill="currentColor"
-                d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6l6 6l1.41-1.41z"
-              /></svg
-            >previous</a
+      <div class="pagination__wrapper">
+        <a
+          href="#"
+          class="previous__btn flex__inline"
+          aria-label="go to next page"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
           >
-        </li>
+            <path
+              fill="currentColor"
+              d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6l6 6l1.41-1.41z"
+            />
+          </svg>
+          Previous
+        </a>
 
-        <li class="pagination__list" data-page="1">
-          <a href="" class="page">1</a>
-        </li>
+        <a href="#" class="page__link" data-page="1" aria-label="go to page one"
+          >1</a
+        >
+        <a href="#" class="page__link" data-page="2" aria-label="go to page two"
+          >2</a
+        ><a
+          href="#"
+          class="page__link"
+          data-page="3"
+          aria-label="go to page three"
+          >3</a
+        >
 
-        <li class="pagination__list" data-page="2">
-          <a href="" class="page">2</a>
-        </li>
-
-        <li class="pagination__list" data-page="3">
-          <a href="#" class="page">3</a>
-        </li>
-
-        <li class="pagination__list">
-          <a href="#" class="page next__page"
-            >next<svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              class="page__icon"
-            >
-              <path
-                fill="currentColor"
-                d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6l-6 6l-1.41-1.41z"
-              /></svg
-          ></a>
-        </li>
-      </ul>
+        <a href="#" class="next__btn flex__inline" aria-label="go to next page">
+          Next
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              fill="currentColor"
+              d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6l-6 6l-1.41-1.41z"
+            />
+          </svg>
+        </a>
+      </div>
     </main>
 
     <footer class="section footer">

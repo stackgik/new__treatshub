@@ -1,0 +1,70 @@
+// colors
+$color-white: hsl(0, 0%, 100%);
+
+$color-primary: hsl(20, 100%, 50%);
+$color-primary--shade: hsl(20, 100%, 30%);
+
+$color-accent: hsl(231, 26%, 44%);
+$color-accent-tint1: hsl(232, 48%, 75%);
+
+$color-gray--100: hsl(0, 0%, 95%);
+$color-gray--200: hsl(210, 17%, 95%);
+$color-gray--300: hsl(0, 0%, 75%);
+$color-gray--400: hsl(210, 9%, 20%);
+$color-gray--500: hsl(0, 0%, 27%);
+$color-gray--700: hsl(210, 11%, 5%);
+$color-gray--800: hsl(40, 12%, 5%);
+
+$color-gradient-400: hsla(0, 0%, 0%, 0.65);
+$color-gradient-500: hsla(0, 0%, 0%, 0.85);
+$color-gradient-600: hsla(0, 0%, 0%, 0.95);
+
+// transition
+$transition: all 0.3s ease;
+
+$generic-gradient--1: hsl(18, 18%, 28%);
+$generic-gradient--2: hsl(273, 31%, 46%);
+$generic-gradient--3: hsl(203, 30%, 26%);
+
+// line heights
+$line-height-00: 1.6;
+$line-height-01: 1.7;
+
+// font-size
+$tiny-font-size: 1rem;
+$sm-font-size: 1.1rem;
+$uppercase-font-size: 1.2rem;
+$default-font-size: 1.7rem;
+$website-title-font-size: 4.4rem;
+
+// font weight variables
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+// Border values
+$border-black: 1px solid hsl(210, 11%, 15%);
+$border-primary: 2px solid hsl(20, 100%, 50%);
+
+// Transform values
+$scale: scale(1.1);
+$rotate-45deg: rotate(45deg);
+$rotate-90deg: rotate(-90deg);
+$rotate-360deg: rotate(360deg);
+
+// visibility
+$visually-hidden: none;
+
+// box shadows
+$subtle-box-shadow: hsla(0, 0%, 39%, 0.2) 0px 2px 8px 0px;
+
+// cursor values
+$disabled: not-allowed;
+$pointer: pointer;
+
+//container
+$center: 0 auto;
+
+// dimension
+$full: 100%;

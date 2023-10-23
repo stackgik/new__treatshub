@@ -1,0 +1,177 @@
+@use '../abstract' as *;
+@use '../vendor/swiper' as *;
+
+.brand__details {
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: transparent;
+    font-size: $sm-font-size;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: transparent;
+    border-bottom: $border-black;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    ul {
+        display: flex;
+    }
+}
+
+.detail {
+    padding-right: 3.2rem;
+
+    &:not(:first-child) {
+        padding-left: 3.2rem;
+    }
+
+    &:not(:last-child) {
+        border-right: $border-black;
+    }
+}
+
+.nav__lists {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.nav__item {
+    padding: 1rem 2rem;
+    transition: $transition;
+}
+
+.nav__link {
+    color: $color-white;
+    font-size: $uppercase-font-size;
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: $transition;
+    cursor: $pointer;
+
+    &:is(:link, :visited) {
+        color: $color-white;
+    }
+
+    &:is(:hover, :active) {
+        color: $color-gray--300;
+    }
+}
+
+#birthday__cakes,
+#special__cakes,
+#food__tray,
+#pastries,
+#beverages {
+    position: relative;
+}
+
+.submenu {
+    z-index: 999;
+    position: absolute;
+    top: 105%;
+    background-color: transparent;
+    width: 200px;
+    transition: $transition;
+    transform: translateX(-2rem);
+}
+
+.nav__link i {
+    font-size: $tiny-font-size;
+    transition: $transition;
+}
+
+.submenu__item {
+    display: block;
+    text-align: left;
+    padding: 1rem 2rem;
+    transition: $transition;
+}
+
+.submenu__link:is(:link, :visited) {
+    color: $color-white;
+    font-size: $uppercase-font-size;
+    font-weight: 800;
+    transition: $transition;
+}
+
+.submenu__link:hover {
+    color: $color-gray--300;
+}
+
+.visually-hidden {
+    display: $visually-hidden;
+}
+
+.submenu--active {
+    display: block;
+}
+
+.icon__items {
+    display: flex;
+    gap: 3rem;
+}
+
+.header {
+    width: 100%;
+    height: 100svh;
+}
+
+.hero__section,
+.hero__slides {
+    height: 100%;
+    width: 100%;
+}
+
+.hero {
+    @include flexCenter;
+    width: 100%;
+    height: 100%;
+}
+
+#hero--1 {
+    background: linear-gradient($color-gradient-500, $color-gradient-500),
+        url('/src/images/pexels-matheus-guimarães-1291712.webp') no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+#hero--2 {
+    background: linear-gradient($color-gradient-500, $color-gradient-500),
+        url('/src/images/fried-spring-rolls-cutting-board.webp') no-repeat;
+    background-size: cover;
+    background-position: top left;
+}
+
+#hero--3 {
+    background: linear-gradient($color-gradient-500, $color-gradient-500),
+        url('/src/images/pexels-annelies-brouw-3028139.webp') no-repeat;
+    background-size: cover;
+    background-position: center left;
+}
+
+.hero__box {
+    width: 80%;
+    max-width: 550px;
+    text-align: center;
+    color: $color-white;
+}
+
+.hero__title {
+    font-size: $website-title-font-size;
+    margin-bottom: 2rem;
+    font-weight: 800;
+}
+
+.hero__details {
+    font-size: $default-font-size;
+    line-height: $line-height-00;
+    margin-bottom: 8rem;
+}

@@ -1,0 +1,35 @@
+@use '../abstract/' as *;
+
+.pagination {
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    width: fit-content;
+    margin: 10rem auto 0;
+    border: 1px solid var(--color-gray--300);
+    border-radius: 5px;
+    box-shadow: var(--subtle-box-shadow);
+
+    & .previous__btn,
+    & .next__btn {
+        text-transform: uppercase;
+        font-size: 1.05rem;
+    }
+
+    &__link {
+        height: 3.5rem;
+        aspect-ratio: 1/1;
+        background-color: var(--color-gray--200);
+        border-radius: 100%;
+        text-align: center;
+        line-height: 3.5rem;
+    }
+
+    &__link--active {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+    }
+}

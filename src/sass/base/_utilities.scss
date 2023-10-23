@@ -1,0 +1,59 @@
+@use '../abstract' as *;
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.left__align {
+    text-align: left;
+}
+
+.section {
+    width: 100%;
+    margin-top: 16rem;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.section__wrapper {
+    width: 100%;
+    max-width: 100rem;
+    margin: $center;
+}
+
+.section--reveal {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.container {
+    width: 100%;
+    max-width: 130rem;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 130rem;
+    margin: $center;
+}
+
+.input,
+input[type='date'] {
+    padding: 1.5rem 2rem;
+    background-color: $color-white;
+    font-size: 1.4rem;
+    font-family: inherit;
+    border: 1px solid #e9ecef;
+}
+
+.flex__inline {
+    display: flex;
+    align-items: center;
+}
+
+.page__link--disabled {
+    cursor: $disabled;
+    color: $color-gray--300;
+}

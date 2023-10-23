@@ -1,0 +1,13 @@
+@use '../abstract' as *;
+
+.article {
+    width: 30rem;
+    padding-bottom: 2rem 0;
+    background-color: $color-white;
+    border-top: $border-primary;
+    color: $color-gray--800;
+
+    &:hover .image {
+        transform: $scale;
+    }
+}

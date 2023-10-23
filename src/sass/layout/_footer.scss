@@ -1,0 +1,157 @@
+@use '../abstract' as *;
+
+.footer {
+    height: 80rem;
+    padding: 6rem 3rem;
+    background-image: linear-gradient(
+            to right,
+            $color-gradient-600,
+            $color-gradient-400
+        ),
+        url(/src/images/footerbg.webp);
+
+    @include flexCenter;
+    flex-flow: column;
+
+    & .footer__top {
+        width: 100%;
+        height: 100%;
+        max-width: 130rem;
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr 60rem 1fr;
+        margin: 0 auto;
+    }
+
+    & .social__links,
+    .footer__links {
+        align-self: center;
+    }
+
+    & .footer__nav-item {
+        padding: 1rem 0;
+    }
+
+    & .footer__navlink:is(:link, :visited) {
+        font-size: 1.2rem;
+        font-weight: 700;
+        font-family: inherit;
+        color: $color-gray--200;
+        text-transform: uppercase;
+        transition: $transition;
+    }
+
+    & .footer__navlink:is(:hover, :active) {
+        color: $color-gray--300;
+    }
+
+    & .section__contact {
+        padding: 10rem 4rem;
+        background: $color-gray--800 url(/src/images/patterns/form-pattern.png);
+        color: $color-gray--200;
+        font-size: 1.5rem;
+        text-align: center;
+        height: 100%;
+    }
+
+    & .logo {
+        font-size: 3rem;
+        font-weight: 800;
+        color: $color-white;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 2.5rem;
+    }
+
+    & address {
+        width: 100%;
+        font-style: normal;
+        margin: 1rem 0;
+    }
+
+    & .mail__address {
+        color: inherit;
+        display: inline-block;
+        font-size: inherit;
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    & .order__request {
+        margin: 1rem 0;
+
+        & .contact__number {
+            color: $color-primary;
+            font-weight: 800;
+        }
+    }
+
+    & .separator {
+        aspect-ratio: 1/1;
+        border: 1px solid $color-primary;
+        display: block;
+        height: 8px;
+        margin: 4rem auto;
+        transform: $rotate-45deg;
+    }
+
+    & .offers__title {
+        color: $color-gray--200;
+        font-size: 3rem;
+        font-weight: 800;
+        text-transform: capitalize;
+        margin: 1rem 0;
+    }
+
+    & .newsletter__field {
+        color: $color-gray--800;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    & .newsletter__form {
+        font-size: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr auto;
+
+        & .newsletter {
+            background-color: $color-gray--100;
+            border: none;
+            color: $color-gray--800;
+            cursor: pointer;
+            font-size: 1.3rem;
+            font-family: inherit;
+            padding: 1.5rem 2rem;
+        }
+
+        & .subscribe__btn {
+            background-color: $color-primary;
+            border: none;
+            color: $color-white;
+            cursor: pointer;
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: 1.1px;
+            padding: 1.5rem 3rem;
+            text-transform: uppercase;
+            transition: $transition;
+        }
+    }
+
+    & .subscribe__btn:hover {
+        background-color: $color-primary--shade;
+    }
+
+    & .footer__bottom {
+        color: $color-gray--200;
+        font-size: 1.4rem;
+        margin-top: 5rem;
+
+        & .github__link {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+}

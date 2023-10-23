@@ -1,0 +1,55 @@
+@use '../abstract' as *;
+
+.section__special__treat {
+    padding: 3rem 6rem;
+    background-color: $color-gray--700;
+    color: $color-white;
+}
+
+.special__treat {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 110rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+}
+
+.treats__details {
+    align-self: center;
+}
+
+.badge {
+    width: 6.2rem;
+    aspect-ratio: 1/1;
+}
+
+.prices {
+    margin-bottom: 7rem;
+}
+
+.price {
+    font-size: $default-font-size;
+    color: #adb5bd;
+    text-decoration: line-through;
+    padding-right: 1rem;
+}
+
+.discounted__price {
+    font-size: 3rem;
+    color: $color-white;
+    font-weight: 700;
+}
+
+.food__tray--wrapper {
+    overflow: hidden;
+}
+
+.food__tray {
+    width: 100%;
+    transition: $transition;
+}
+
+.food__tray:hover {
+    transform: $scale;
+}
