@@ -1,792 +1,886 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/styles/general--styles.css" />
-    <link rel="stylesheet" href="/styles/media--queries.css" />
-    <link rel="stylesheet" href="/styles/styles.css" />
-    <script defer src="/JS_files/pages.js"></script>
-    <script
-      src="https://kit.fontawesome.com/ced9a6871b.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="brand__details brand__details--pages">
-      <ul class="location__time">
-        <li class="detail">
-          <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Jane Doe's
-          Location
-        </li>
-        <li class="detail">
-          <i class="fa-solid fa-clock" aria-hidden="true"></i> Open Daily: 9am
-          to 6pm
-        </li>
-      </ul>
-
-      <ul class="contacts">
-        <li class="detail">
-          <i class="fa-solid fa-phone" aria-hidden="true"></i> +234 810 771 3648
-        </li>
-        <li class="detail">
-          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-          sekonicakes@gmail.com
-        </li>
-      </ul>
-    </div>
-
-    <!-- primary navigation section -->
-    <nav class="primary__navigation primary__navigation--pages">
-      <a href="#" class="logo" aria-label="home">TreatsHub</a>
-
-      <ul class="nav__lists">
-        <li class="nav__item" data-page="home">
-          <a href="/index.html" class="nav__link nav__link--home">Home</a>
-        </li>
-
-        <li
-          class="nav__item menu__options"
-          id="birthday__cakes"
-          data-page="birthday-cakes"
-        >
-          <a class="nav__link nav__link--birthday-cakes">
-            Birthday Cakes
-            <i
-              class="fa-solid fa-angle-down icon--birthday-cakes"
-              aria-hidden="true"
-            ></i>
-          </a>
-
-          <ul
-            class="submenu submenu--page submenu--birthday-cakes visually-hidden"
-          >
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Fondant Cakes</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Buttercream Cakes</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Fruit Cakes</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Cupcakes</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Dessert</a>
-            </li>
-          </ul>
-        </li>
-
-        <li
-          class="nav__item menu__options"
-          id="special__cakes"
-          data-page="special-cakes"
-        >
-          <a class="nav__link nav__link--special-cakes">
-            Special Cakes
-            <i
-              class="fa-solid fa-angle-down icon--special-cakes"
-              aria-hidden="true"
-            ></i
-          ></a>
-
-          <ul
-            class="submenu submenu--page submenu--special-cakes visually-hidden"
-          >
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Wedding Cakes</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Corporate Cakes</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Valentine Cakes</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Cake Paffait</a>
-            </li>
-          </ul>
-        </li>
-
-        <li
-          class="nav__item menu__options"
-          id="food__tray"
-          data-page="food-tray"
-        >
-          <a class="nav__link nav__link--food-tray"
-            >Food Tray
-            <i
-              class="fa-solid fa-angle-down icon--food-tray"
-              aria-hidden="true"
-            ></i
-          ></a>
-
-          <ul class="submenu submenu--page submenu--food-tray visually-hidden">
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Budget Trays</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Special Trays</a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="nav__item menu__options" id="pastries" data-page="pastries">
-          <a class="nav__link nav__link--pastries"
-            >Pastries
-            <i
-              class="fa-solid fa-angle-down icon--pastries"
-              aria-hidden="true"
-            ></i
-          ></a>
-
-          <ul class="submenu submenu--page submenu--pastries visually-hidden">
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Meat Pies</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Chicken Pies</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Spicy Puff-Puff</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Jam Doughnuts</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Small Chops</a>
-            </li>
-          </ul>
-        </li>
-
-        <li
-          class="nav__item menu__options"
-          id="beverages"
-          data-page="beverages"
-        >
-          <a class="nav__link nav__link--beverages"
-            >Beverages
-            <i
-              class="fa-solid fa-angle-down icon--beverages"
-              aria-hidden="true"
-            ></i
-          ></a>
-
-          <ul class="submenu submenu--page submenu--beverages visually-hidden">
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Hibiscus Drink</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Soyabean Drink</a>
-            </li>
-            <li class="submenu__item">
-              <a href="#" class="submenu__link">Smoothie</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-
-      <ul class="icon__items">
-        <li class="icon__item">
-          <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            cursor="pointer"
-          >
-            <path
-              fill="currentColor"
-              d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"
-            />
-          </svg>
-        </li>
-
-        <li class="icon__item">
-          <!-- <i class="fa-solid fa-cart-shopping"></i> -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 256 256"
-            cursor="pointer"
-          >
-            <path
-              fill="currentColor"
-              d="m239.89 198.12l-14.26-120a16 16 0 0 0-16-14.12H176a48 48 0 0 0-96 0H46.33a16 16 0 0 0-16 14.12l-14.26 120A16 16 0 0 0 20 210.6a16.13 16.13 0 0 0 12 5.4h191.92a16.13 16.13 0 0 0 12.08-5.4a16 16 0 0 0 3.89-12.48ZM128 32a32 32 0 0 1 32 32H96a32 32 0 0 1 32-32ZM32 200L46.33 80H80v24a8 8 0 0 0 16 0V80h64v24a8 8 0 0 0 16 0V80h33.75l14.17 120Z"
-            />
-          </svg>
-        </li>
-      </ul>
-    </nav>
-
-    <main class="section birthday__cakes" aria-label="all-birthday__cakes">
-      <section class="page__intro">
-        <div class="general__box">
-          <div class="intro__box">
-            <h1 class="birthday__cakes-title">All Birthday Cakes</h1>
-            <p class="birthday__cakes-details">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-              dolorem. At, eum sapiente quo veniam atque nihil obcaecati! Vitae
-              adipisci beatae officiis consequuntur, nam eveniet necessitatibus
-              reiciendis nihil voluptatibus quae.Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Labore minima repudiandae
-              dignissimos mollitia autem explicabo facere nostrum unde
-              reiciendis neque?
-            </p>
-          </div>
-
-          <div class="filter-sort__box">
-            <ul>
-              <li>
-                filter by <br />
-                <br />
-                <select name="">
-                  <option value="">All Birthday Cakes</option>
-                  <option value="">Fondant</option>
-                  <option value="">Buttercream</option>
-                  <option value="">Fruit</option>
-                  <option value="">Cupcakes</option>
-                  <option value="">Desserts</option>
-                </select>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  class="select__icon"
-                >
-                  <path fill="currentColor" d="m12 15l-5-5h10l-5 5Z" />
-                </svg>
-              </li>
-
-              <li>
-                sort by <br />
-                <br />
-                <select name="">
-                  <option value="">Featured</option>
-                </select>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  class="select__icon"
-                >
-                  <path fill="currentColor" d="m12 15l-5-5h10l-5 5Z" />
-                </svg>
-              </li>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../../public/css/main.css" />
+        <script
+            defer
+            src="https://kit.fontawesome.com/ced9a6871b.js"
+            crossorigin="anonymous"
+        ></script>
+        <script defer src="../../JS_files/pages.js"></script>
+    </head>
+    <body>
+        <div class="brand__details brand__details--pages">
+            <ul class="location__time">
+                <li class="detail">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    Jane Doe's Location
+                </li>
+                <li class="detail">
+                    <i class="fa-solid fa-clock" aria-hidden="true"></i> Open
+                    Daily: 9am to 6pm
+                </li>
             </ul>
-          </div>
+
+            <ul class="contacts">
+                <li class="detail">
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i> +234
+                    810 771 3648
+                </li>
+                <li class="detail">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    sekonicakes@gmail.com
+                </li>
+            </ul>
         </div>
-      </section>
 
-      <section class="birthday__wrapper">
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-lil-artsy-1793037.webp"
-              alt="birthday cake"
-              class="image"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
+        <!-- primary navigation section -->
+        <nav class="primary__navigation primary__navigation--pages">
+            <a href="#" class="logo" aria-label="home">TreatsHub</a>
 
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-lisa-fotios-4987181.webp"
-              alt="birthday cake"
-              class="image"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
+            <ul class="nav__lists">
+                <li class="nav__item" data-page="home">
+                    <a href="/index.html" class="nav__link nav__link--home"
+                        >Home</a
+                    >
+                </li>
 
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-marina-utrabo-1729808.webp"
-              alt="birthday cake"
-              class="image"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
+                <li
+                    class="nav__item menu__options"
+                    id="birthday__cakes"
+                    data-page="birthday-cakes"
+                >
+                    <a class="nav__link nav__link--birthday-cakes">
+                        Birthday Cakes
+                        <i
+                            class="fa-solid fa-angle-down icon--birthday-cakes"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
 
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-matheus-guimarães-1291712.webp"
-              alt="birthday cake"
-              class="image"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
+                    <ul
+                        class="submenu submenu--page submenu--birthday-cakes visually-hidden"
+                    >
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Fondant Cakes</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link"
+                                >Buttercream Cakes</a
+                            >
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Fruit Cakes</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Cupcakes</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Dessert</a>
+                        </li>
+                    </ul>
+                </li>
 
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-nataliya-vaitkevich-7826287.webp"
-              alt="birthday cake"
-              class="image"
-              loading="lazy"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
+                <li
+                    class="nav__item menu__options"
+                    id="special__cakes"
+                    data-page="special-cakes"
+                >
+                    <a class="nav__link nav__link--special-cakes">
+                        Special Cakes
+                        <i
+                            class="fa-solid fa-angle-down icon--special-cakes"
+                            aria-hidden="true"
+                        ></i
+                    ></a>
 
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-pixabay-461431.webp"
-              alt="birthday cake"
-              class="image"
-              loading="lazy"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
+                    <ul
+                        class="submenu submenu--page submenu--special-cakes visually-hidden"
+                    >
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Wedding Cakes</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link"
+                                >Corporate Cakes</a
+                            >
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link"
+                                >Valentine Cakes</a
+                            >
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Cake Paffait</a>
+                        </li>
+                    </ul>
+                </li>
 
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-polina-tankilevitch-4109998.webp"
-              alt="birthday cake"
-              class="image"
-              loading="lazy"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
+                <li
+                    class="nav__item menu__options"
+                    id="food__tray"
+                    data-page="food-tray"
+                >
+                    <a class="nav__link nav__link--food-tray"
+                        >Food Tray
+                        <i
+                            class="fa-solid fa-angle-down icon--food-tray"
+                            aria-hidden="true"
+                        ></i
+                    ></a>
 
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-ron-lach-10033198.webp"
-              alt="birthday cake"
-              class="image"
-              loading="lazy"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
+                    <ul
+                        class="submenu submenu--page submenu--food-tray visually-hidden"
+                    >
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Budget Trays</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Special Trays</a>
+                        </li>
+                    </ul>
+                </li>
 
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-sabel-blanco-1835765.webp"
-              alt="birthday cake"
-              class="image"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
+                <li
+                    class="nav__item menu__options"
+                    id="pastries"
+                    data-page="pastries"
+                >
+                    <a class="nav__link nav__link--pastries"
+                        >Pastries
+                        <i
+                            class="fa-solid fa-angle-down icon--pastries"
+                            aria-hidden="true"
+                        ></i
+                    ></a>
 
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-saliha-sevim-9520630.webp"
-              alt="birthday cake"
-              class="image"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
+                    <ul
+                        class="submenu submenu--page submenu--pastries visually-hidden"
+                    >
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Meat Pies</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Chicken Pies</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link"
+                                >Spicy Puff-Puff</a
+                            >
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Jam Doughnuts</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Small Chops</a>
+                        </li>
+                    </ul>
+                </li>
 
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-taryn-elliott-8549523.webp"
-              alt="birthday cake"
-              class="image"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
+                <li
+                    class="nav__item menu__options"
+                    id="beverages"
+                    data-page="beverages"
+                >
+                    <a class="nav__link nav__link--beverages"
+                        >Beverages
+                        <i
+                            class="fa-solid fa-angle-down icon--beverages"
+                            aria-hidden="true"
+                        ></i
+                    ></a>
 
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-thirdman-7600389.webp"
-              alt="birthday cake"
-              class="image"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
-
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-tima-miroshnichenko-5804902.webp"
-              alt="birthday cake"
-              class="image"
-              loading="lazy"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
-
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-tubarones-photography-10577002.webp"
-              alt="birthday cake"
-              class="image"
-              loading="lazy"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
-
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-vojtech-okenka-1055272 (2).webp"
-              alt="birthday cake"
-              class="image"
-              loading="lazy"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
-
-        <article class="article">
-          <figure>
-            <img
-              src="/images/birthday cakes/pexels-karolina-grabowska-4959709.webp"
-              alt="birthday cake"
-              class="image"
-              loading="lazy"
-            />
-          </figure>
-          <figcaption>
-            <p class="cake__description">
-              Buttercream Cake With Birthday Light Candles
-            </p>
-            <p>
-              <sup>&#8358;</sup>
-              <span class="cake__price">30,000</span>
-            </p>
-            <p class="price__range">minimum</p>
-          </figcaption>
-          <a href="#" class="btn order__btn full__stretch">place order</a>
-        </article>
-      </section>
-
-      <div class="pagination__wrapper">
-        <a
-          href="#"
-          class="previous__btn flex__inline"
-          aria-label="go to next page"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              fill="currentColor"
-              d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6l6 6l1.41-1.41z"
-            />
-          </svg>
-          Previous
-        </a>
-
-        <a href="#" class="page__link" data-page="1" aria-label="go to page one"
-          >1</a
-        >
-        <a href="#" class="page__link" data-page="2" aria-label="go to page two"
-          >2</a
-        ><a
-          href="#"
-          class="page__link"
-          data-page="3"
-          aria-label="go to page three"
-          >3</a
-        >
-
-        <a href="#" class="next__btn flex__inline" aria-label="go to next page">
-          Next
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              fill="currentColor"
-              d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6l-6 6l-1.41-1.41z"
-            />
-          </svg>
-        </a>
-      </div>
-    </main>
-
-    <footer class="section footer">
-      <div class="footer__top">
-        <section class="footer__links">
-          <nav class="secondary__navigation">
-            <ul class="footer__navlists">
-              <li class="footer__nav-item">
-                <a href="index.html" class="footer__navlink">help</a>
-              </li>
-
-              <li class="footer__nav-item">
-                <a href="#" class="footer__navlink">terms and conditions</a>
-              </li>
-
-              <li class="footer__nav-item">
-                <a href="#" class="footer__navlink">privacy and policy</a>
-              </li>
-
-              <li class="footer__nav-item">
-                <a href="#" class="footer__navlink">create account</a>
-              </li>
-
-              <li class="footer__nav-item">
-                <a href="#" class="footer__navlink">cake delivery faq</a>
-              </li>
-
-              <li class="footer__nav-item">
-                <a href="#" class="footer__navlink">Delivery details</a>
-              </li>
+                    <ul
+                        class="submenu submenu--page submenu--beverages visually-hidden"
+                    >
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Hibiscus Drink</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Soyabean Drink</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Smoothie</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
-          </nav>
-        </section>
 
-        <section class="section__contact">
-          <a href="#" class="logo" aria-label="home">TreatsHub</a>
-          <address>Someplace On God's Green Earth</address>
-          <a href="mailto:stackgik@gmail.com" class="mail__address"
-            >stackgik@gmail.com</a
-          >
-          <p class="order__request">
-            Order request:
-            <a href="tel:+2348107713648" class="link contact__number"
-              >+234-810-771-3648</a
-            >
-          </p>
+            <ul class="icon__items">
+                <li class="icon__item">
+                    <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        cursor="pointer"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"
+                        />
+                    </svg>
+                </li>
 
-          <p class="order__time">Open daily: 09:00AM &mdash; 06:00PM</p>
-
-          <div class="separator"></div>
-
-          <p class="offers__title">get news and offers</p>
-          <p class="offers__subtitle">Subscribe and get 15% off</p>
-
-          <div class="newsletter__field">
-            <form action="#" class="newsletter__form" novalidate>
-              <input
-                type="mail"
-                name="newsletter"
-                placeholder="example@gmail.com"
-                class="newsletter"
-              />
-              <button class="subscribe__btn">subscribe</button>
-            </form>
-          </div>
-        </section>
-
-        <section class="social__links">
-          <nav class="secondary__navigation">
-            <ul class="footer__navlists">
-              <li class="footer__nav-item">
-                <a href="index.html" class="footer__navlink">facebook</a>
-              </li>
-
-              <li class="footer__nav-item">
-                <a href="#" class="footer__navlink">telegram</a>
-              </li>
-
-              <li class="footer__nav-item">
-                <a href="#" class="footer__navlink">whatsapp</a>
-              </li>
-
-              <li class="footer__nav-item">
-                <a href="#" class="footer__navlink">instagram</a>
-              </li>
-
-              <li class="footer__nav-item">
-                <a href="#" class="footer__navlink">snapchat</a>
-              </li>
-
-              <li class="footer__nav-item">
-                <a href="#" class="footer__navlink">linkedin</a>
-              </li>
+                <li class="icon__item">
+                    <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 256 256"
+                        cursor="pointer"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="m239.89 198.12l-14.26-120a16 16 0 0 0-16-14.12H176a48 48 0 0 0-96 0H46.33a16 16 0 0 0-16 14.12l-14.26 120A16 16 0 0 0 20 210.6a16.13 16.13 0 0 0 12 5.4h191.92a16.13 16.13 0 0 0 12.08-5.4a16 16 0 0 0 3.89-12.48ZM128 32a32 32 0 0 1 32 32H96a32 32 0 0 1 32-32ZM32 200L46.33 80H80v24a8 8 0 0 0 16 0V80h64v24a8 8 0 0 0 16 0V80h33.75l14.17 120Z"
+                        />
+                    </svg>
+                </li>
             </ul>
-          </nav>
-        </section>
-      </div>
+        </nav>
 
-      <div class="footer__bottom">
-        <p class="copyright">
-          &copy; TreatsHub. All rights reserved. Developed and designed by
-          <a href="" class="github__link">stackgik</a>
-        </p>
-      </div>
-    </footer>
-  </body>
+        <main class="section birthday__cakes" aria-label="all-birthday__cakes">
+            <section class="page__intro">
+                <div class="general__box">
+                    <div class="intro__box">
+                        <h1 class="birthday__cakes-title">
+                            All Birthday Cakes
+                        </h1>
+                        <p class="birthday__cakes-details">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Quidem, dolorem. At, eum sapiente quo veniam
+                            atque nihil obcaecati! Vitae adipisci beatae
+                            officiis consequuntur, nam eveniet necessitatibus
+                            reiciendis nihil voluptatibus quae.Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Labore
+                            minima repudiandae dignissimos mollitia autem
+                            explicabo facere nostrum unde reiciendis neque?
+                        </p>
+                    </div>
+
+                    <div class="filter-sort__box">
+                        <ul>
+                            <li>
+                                filter by <br />
+                                <br />
+                                <select name="">
+                                    <option value="">All Birthday Cakes</option>
+                                    <option value="">Fondant</option>
+                                    <option value="">Buttercream</option>
+                                    <option value="">Fruit</option>
+                                    <option value="">Cupcakes</option>
+                                    <option value="">Desserts</option>
+                                </select>
+
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    class="select__icon"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="m12 15l-5-5h10l-5 5Z"
+                                    />
+                                </svg>
+                            </li>
+
+                            <li>
+                                sort by <br />
+                                <br />
+                                <select name="">
+                                    <option value="">Featured</option>
+                                </select>
+
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    class="select__icon"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="m12 15l-5-5h10l-5 5Z"
+                                    />
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="birthday__wrapper">
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-lil-artsy-1793037.webp"
+                            alt="birthday cake"
+                            class="image"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-lisa-fotios-4987181.webp"
+                            alt="birthday cake"
+                            class="image"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-marina-utrabo-1729808.webp"
+                            alt="birthday cake"
+                            class="image"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-matheus-guimarães-1291712.webp"
+                            alt="birthday cake"
+                            class="image"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-nataliya-vaitkevich-7826287.webp"
+                            alt="birthday cake"
+                            class="image"
+                            loading="lazy"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-pixabay-461431.webp"
+                            alt="birthday cake"
+                            class="image"
+                            loading="lazy"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-polina-tankilevitch-4109998.webp"
+                            alt="birthday cake"
+                            class="image"
+                            loading="lazy"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-ron-lach-10033198.webp"
+                            alt="birthday cake"
+                            class="image"
+                            loading="lazy"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-sabel-blanco-1835765.webp"
+                            alt="birthday cake"
+                            class="image"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-saliha-sevim-9520630.webp"
+                            alt="birthday cake"
+                            class="image"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-taryn-elliott-8549523.webp"
+                            alt="birthday cake"
+                            class="image"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="/images/birthday cakes/pexels-thirdman-7600389.webp"
+                            alt="birthday cake"
+                            class="image"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-tima-miroshnichenko-5804902.webp"
+                            alt="birthday cake"
+                            class="image"
+                            loading="lazy"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-tubarones-photography-10577002.webp"
+                            alt="birthday cake"
+                            class="image"
+                            loading="lazy"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-vojtech-okenka-1055272 (2).webp"
+                            alt="birthday cake"
+                            class="image"
+                            loading="lazy"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+
+                <article class="article">
+                    <figure>
+                        <img
+                            src="../../images/birthday cakes/pexels-karolina-grabowska-4959709.webp"
+                            alt="birthday cake"
+                            class="image"
+                            loading="lazy"
+                        />
+                    </figure>
+                    <figcaption>
+                        <p class="cake__description">
+                            Buttercream Cake With Birthday Light Candles
+                        </p>
+                        <p>
+                            <sup>&#8358;</sup>
+                            <span class="cake__price">30,000</span>
+                        </p>
+                        <p class="price__range">minimum</p>
+                    </figcaption>
+                    <a href="#" class="btn btn--filled btn--fulstretch"
+                        >place order</a
+                    >
+                </article>
+            </section>
+
+            <div class="pagination__wrapper">
+                <a
+                    href="#"
+                    class="previous__btn flex__inline"
+                    aria-label="go to next page"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6l6 6l1.41-1.41z"
+                        />
+                    </svg>
+                    Previous
+                </a>
+
+                <a
+                    href="#"
+                    class="page__link"
+                    data-page="1"
+                    aria-label="go to page one"
+                    >1</a
+                >
+                <a
+                    href="#"
+                    class="page__link"
+                    data-page="2"
+                    aria-label="go to page two"
+                    >2</a
+                ><a
+                    href="#"
+                    class="page__link"
+                    data-page="3"
+                    aria-label="go to page three"
+                    >3</a
+                >
+
+                <a
+                    href="#"
+                    class="next__btn flex__inline"
+                    aria-label="go to next page"
+                >
+                    Next
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6l-6 6l-1.41-1.41z"
+                        />
+                    </svg>
+                </a>
+            </div>
+        </main>
+
+        <footer class="section footer">
+            <div class="footer__top">
+                <section class="footer__links">
+                    <nav class="secondary__navigation">
+                        <ul class="footer__navlists">
+                            <li class="footer__nav-item">
+                                <a href="index.html" class="footer__navlink"
+                                    >help</a
+                                >
+                            </li>
+
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__navlink"
+                                    >terms and conditions</a
+                                >
+                            </li>
+
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__navlink"
+                                    >privacy and policy</a
+                                >
+                            </li>
+
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__navlink"
+                                    >create account</a
+                                >
+                            </li>
+
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__navlink"
+                                    >cake delivery faq</a
+                                >
+                            </li>
+
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__navlink"
+                                    >Delivery details</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <section class="section__contact">
+                    <a href="#" class="logo" aria-label="home">TreatsHub</a>
+                    <address>Someplace On God's Green Earth</address>
+                    <a href="mailto:stackgik@gmail.com" class="mail__address"
+                        >stackgik@gmail.com</a
+                    >
+                    <p class="order__request">
+                        Order request:
+                        <a
+                            href="tel:+2348107713648"
+                            class="link contact__number"
+                            >+234-810-771-3648</a
+                        >
+                    </p>
+
+                    <p class="order__time">
+                        Open daily: 09:00AM &mdash; 06:00PM
+                    </p>
+
+                    <div class="separator"></div>
+
+                    <p class="offers__title">get news and offers</p>
+                    <p class="offers__subtitle">Subscribe and get 15% off</p>
+
+                    <div class="newsletter__field">
+                        <form action="#" class="newsletter__form" novalidate>
+                            <input
+                                type="mail"
+                                name="newsletter"
+                                placeholder="example@gmail.com"
+                                class="newsletter"
+                            />
+                            <button class="subscribe__btn">subscribe</button>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="social__links">
+                    <nav class="secondary__navigation">
+                        <ul class="footer__navlists">
+                            <li class="footer__nav-item">
+                                <a href="index.html" class="footer__navlink"
+                                    >facebook</a
+                                >
+                            </li>
+
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__navlink">telegram</a>
+                            </li>
+
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__navlink">whatsapp</a>
+                            </li>
+
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__navlink"
+                                    >instagram</a
+                                >
+                            </li>
+
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__navlink">snapchat</a>
+                            </li>
+
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__navlink">linkedin</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="copyright">
+                    &copy; TreatsHub. All rights reserved. Developed and
+                    designed by
+                    <a href="" class="github__link">stackgik</a>
+                </p>
+            </div>
+        </footer>
+    </body>
 </html>
