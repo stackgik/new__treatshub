@@ -1,0 +1,53 @@
+@use '../abstract/' as *;
+
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100svh;
+    position: fixed;
+    z-index: 999;
+    background-color: $color-white;
+}
+
+.merge {
+    animation: spin 1.33333s infinite linear;
+    height: 30px;
+    position: relative;
+    width: 30px;
+}
+
+.merge::after,
+.merge::before {
+    content: '';
+    height: 30px;
+    width: 30px;
+    animation: grow 2s infinite ease backwards;
+    border-radius: 100%;
+    background: $color-primary;
+    opacity: 0.75;
+    position: absolute;
+    transform-origin: -200% -80%;
+}
+
+.merge::before {
+    background: $color-accent;
+    transform-origin: 200% 80%;
+}
+
+@keyframes grow {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.25);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

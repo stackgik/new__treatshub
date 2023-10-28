@@ -13,6 +13,8 @@
 @use 'components/button';
 @use 'components/navbar';
 @use 'components/scaledImg';
+@use 'components/pagination';
+@use 'components/preloader';
 
 // Base
 @use 'base/base';

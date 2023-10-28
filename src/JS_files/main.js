@@ -1,4 +1,6 @@
 'use strict';
+removePreloader();
+
 //code for the Swiper.js
 const progressCircle = document.querySelector('.autoplay-progress svg');
 const progressContent = document.querySelector('.autoplay-progress span');
@@ -161,3 +163,13 @@ const options = {
 
 const sectionObserver = new IntersectionObserver(sectionCallback, options);
 allSections.forEach(section => sectionObserver.observe(section));
+
+// functionality for removing preloader on page load
+
+function removePreloader() {
+    const preloader = document.querySelector('.preloader');
+
+    window.addEventListener('load', () => {
+        preloader.style.display = 'none';
+    });
+}
