@@ -1,9 +1,106 @@
 'use strict';
-removePreloader();
 
-//code for the Swiper.js
+const removePreloader = () => {
+    const preloader = document.querySelector('.preloader');
+
+    window.addEventListener('load', () => {
+        preloader.style.display = 'none';
+    });
+};
+// removePreloader();
+
+// ********************************************************************************
+
+//? Functionality for revealing the sections as we scroll to them.
+const revealSections = () => {
+    const allSections = document.querySelectorAll('.section');
+
+    const sectionCallback = function (entries) {
+        const [entry] = entries;
+        if (entry.isIntersecting) entry.target.classList.add('section--reveal');
+    };
+
+    const options = {
+        root: null,
+        threshold: 0.15,
+    };
+
+    const sectionObserver = new IntersectionObserver(sectionCallback, options);
+    allSections.forEach(section => sectionObserver.observe(section));
+};
+
+// revealSections();
+
+// ********************************************************************************
+//? Functionality to handle navigation
+
+const menu = document.querySelector('.nav__lists'),
+    navItems = document.querySelectorAll('.nav__item'),
+    navLinks = document.querySelectorAll('.nav__link'),
+    submenus = document.querySelectorAll('.submenu'),
+    linkIcons = document.querySelectorAll('.nav__link i');
+
+const resetLinks = () => {
+    // doing general resetting
+    navLinks.forEach(navLink => navLink.classList.remove('link--active'));
+    submenus.forEach(submenu => submenu.classList.remove('submenu--active'));
+    linkIcons.forEach(icon => icon.classList.remove('link--active'));
+    linkIcons.forEach(icon => (icon.style.transform = 'rotate(0)'));
+};
+
+const toggleSubmenu = () => {
+    menu.addEventListener('click', event => {
+        const clicked = event.target.closest('.nav__item');
+
+        // using the guard clause
+        if (!clicked) return;
+
+        // selecting the elements involved
+        const clickedLink = clicked.querySelector(
+            `.nav__link--${clicked.dataset.page}`
+        );
+
+        const showSubmenu = clicked.querySelector(
+            `.submenu--${clicked.dataset.page}`
+        );
+
+        const rotateIcon = clicked.querySelector(
+            `.icon--${clicked.dataset.page}`
+        );
+
+        // this selects the main link inside the e.target
+        const isLinkActive = clickedLink.classList.contains('link--active');
+
+        // It checks if the link is already open, then does a general reset
+        if (isLinkActive) resetLinks();
+
+        // If not open, add these classes
+        if (!isLinkActive) {
+            // adding the necessary classes if the link isn't already active
+            resetLinks();
+            clickedLink.classList.add('link--active');
+            showSubmenu.classList.add('submenu--active');
+            rotateIcon.classList.add('link--active');
+            rotateIcon.style.transform = 'rotate(180deg)';
+        }
+    });
+
+    // a click even on the body to also close the submenu
+    const body = document.querySelector('body');
+    body.addEventListener('click', event => {
+        if (!event.target.closest('.nav__item')) {
+            resetLinks();
+        }
+    });
+};
+
+// toggleSubmenu();
+
+// ********************************************************************************
+//? functionality for the hero swiper
 const progressCircle = document.querySelector('.autoplay-progress svg');
 const progressContent = document.querySelector('.autoplay-progress span');
+
 const heroSection = new Swiper('.hero__section', {
     spaceBetween: 0,
     centeredSlides: true,
@@ -26,7 +123,9 @@ const heroSection = new Swiper('.hero__section', {
     grabCursor: true,
 });
 
-// Treats swiper
+// ********************************************************************************
+
+//? functionality for the treats swiper
 const treats = new Swiper('.swiper1', {
     slidesPerView: 'auto',
     spaceBetween: 20,
@@ -39,38 +138,48 @@ const treats = new Swiper('.swiper1', {
     },
 });
 
-// ! Script for the treats menu functionality
+// ********************************************************************************
+
+//? functionality for the treats menu
 const treatsMenu = document.querySelector('.treats__menu'),
     treatsItems = document.querySelectorAll('.treats__item'),
     sectionContainers = document.querySelectorAll('.section__container'),
     underline = document.querySelector('.line');
 
-treatsMenu.addEventListener('click', e => {
-    const clicked = e.target.closest('.treats__item');
+const revealTreats = () => {
+    treatsMenu.addEventListener('click', e => {
+        const clicked = e.target.closest('.treats__item');
 
-    // Guard Clause
-    if (!clicked) return;
+        // Guard Clause
+        if (!clicked) return;
 
-    // adding the underline functionalities
-    underline.style.width = clicked.offsetWidth + 'px';
-    underline.style.left = clicked.offsetLeft + 'px';
+        // adding the underline functionalities
+        underline.style.width = clicked.offsetWidth + 'px';
+        underline.style.left = clicked.offsetLeft + 'px';
 
-    // resetting all the classes
-    treatsItems.forEach(item => item.classList.remove('treats__item--active'));
+        // resetting all the classes
+        treatsItems.forEach(item =>
+            item.classList.remove('treats__item--active')
+        );
 
-    sectionContainers.forEach(container =>
-        container.classList.remove('section__container--active')
-    );
+        sectionContainers.forEach(container =>
+            container.classList.remove('section__container--active')
+        );
 
-    // adding the classes
-    document
-        .querySelector(`.section__container--${clicked.dataset.item}`)
-        .classList.add('section__container--active');
+        // adding the classes
+        document
+            .querySelector(`.section__container--${clicked.dataset.item}`)
+            .classList.add('section__container--active');
 
-    clicked.classList.add('treats__item--active');
-});
+        clicked.classList.add('treats__item--active');
+    });
+};
 
-// Swiper for Testimonials
+// revealTreats();
+
+// ********************************************************************************
+
+//? Swiper for Testimonials
 const testimonials = new Swiper('.wrapper', {
     effect: 'coverflow',
     grabCursor: true,
@@ -89,87 +198,12 @@ const testimonials = new Swiper('.wrapper', {
     },
 });
 
-// ! Functionality to handle navigation
-
-const menu = document.querySelector('.nav__lists'),
-    navItems = document.querySelectorAll('.nav__item'),
-    navLinks = document.querySelectorAll('.nav__link'),
-    submenus = document.querySelectorAll('.submenu'),
-    linkIcons = document.querySelectorAll('.nav__link i');
-
-const resetLinks = () => {
-    // doing general resetting
-    navLinks.forEach(navLink => navLink.classList.remove('link--active'));
-    submenus.forEach(submenu => submenu.classList.remove('submenu--active'));
-    linkIcons.forEach(icon => icon.classList.remove('link--active'));
-    linkIcons.forEach(icon => (icon.style.transform = 'rotate(0)'));
+export {
+    toggleSubmenu,
+    revealSections,
+    removePreloader,
+    treats,
+    revealTreats,
+    heroSection,
+    testimonials,
 };
-
-// ! This code runs each time a click is made on the links with nav__item class
-menu.addEventListener('click', event => {
-    const clicked = event.target.closest('.nav__item');
-
-    // using the guard clause
-    if (!clicked) return;
-
-    // selecting the elements involved
-    const clickedLink = clicked.querySelector(
-        `.nav__link--${clicked.dataset.page}`
-    );
-
-    const showSubmenu = clicked.querySelector(
-        `.submenu--${clicked.dataset.page}`
-    );
-
-    const rotateIcon = clicked.querySelector(`.icon--${clicked.dataset.page}`);
-
-    // this selects the main link inside the e.target
-    const isLinkActive = clickedLink.classList.contains('link--active');
-
-    // It checks if the link is already open, then does a general reset
-    if (isLinkActive) resetLinks();
-
-    // If not open, add these classes
-    if (!isLinkActive) {
-        // adding the necessary classes if the link isn't already active
-        resetLinks();
-        clickedLink.classList.add('link--active');
-        showSubmenu.classList.add('submenu--active');
-        rotateIcon.classList.add('link--active');
-        rotateIcon.style.transform = 'rotate(180deg)';
-    }
-});
-
-// a click even on the body to also close the submenu
-const body = document.querySelector('body');
-body.addEventListener('click', event => {
-    if (!event.target.closest('.nav__item')) {
-        resetLinks();
-    }
-});
-
-// Functionality for revealing the sections as we scroll to them.
-const allSections = document.querySelectorAll('.section');
-
-const sectionCallback = function (entries) {
-    const [entry] = entries;
-    if (entry.isIntersecting) entry.target.classList.add('section--reveal');
-};
-
-const options = {
-    root: null,
-    threshold: 0.15,
-};
-
-const sectionObserver = new IntersectionObserver(sectionCallback, options);
-allSections.forEach(section => sectionObserver.observe(section));
-
-// functionality for removing preloader on page load
-
-function removePreloader() {
-    const preloader = document.querySelector('.preloader');
-
-    window.addEventListener('load', () => {
-        preloader.style.display = 'none';
-    });
-}
