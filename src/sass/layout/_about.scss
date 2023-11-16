@@ -1,0 +1,63 @@
+@use '../abstract' as *;
+
+.section__about {
+    padding: 0 6rem;
+}
+
+.section__content {
+    width: $full;
+    display: grid;
+    grid-template-columns: 30rem 30rem 1fr;
+    grid-template-rows: 28rem 28rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.section__content img {
+    object-fit: cover;
+    object-position: center;
+    width: $full;
+    height: $full;
+}
+
+.smoothie {
+    grid-column: 1/2;
+    grid-row: 1 / span 2;
+}
+
+.jar--cake {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.springroll {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.about__us {
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
+    color: $color-gray--700;
+}
+
+.call__order--text {
+    font-weight: $font-weight-bold;
+    display: block;
+    text-align: center;
+}
+
+.call__order--number {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: $font-weight-extrabold;
+    color: $color-primary;
+    display: block;
+    text-align: center;
+}
+
+.about__us--link {
+    text-align: center;
+}

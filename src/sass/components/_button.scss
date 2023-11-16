@@ -1,0 +1,58 @@
+@use '../abstract' as *;
+.btn {
+    font-size: $uppercase-font-size;
+    letter-spacing: 1px;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    display: inline-block;
+    position: relative;
+
+    &--filled:is(:link, :visited) {
+        color: $color-white;
+        background-color: $color-primary;
+        transition: $transition;
+
+        &:is(:hover, :active) {
+            background-color: $color-primary--shade;
+        }
+    }
+
+    &--nofill:is(:link, :visited) {
+        color: $color-primary;
+        padding: 0;
+        border-bottom: $border-primary;
+        transition: $transition;
+    }
+
+    &--fullstretch {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    &--animated {
+        color: $color-white;
+        background-color: $color-primary;
+        transition: $transition;
+        z-index: 1;
+
+        &::after {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.3s ease;
+            height: $full;
+            width: $full;
+            background-color: $color-primary;
+        }
+
+        &:hover::after {
+            transform: scaleX(1.3) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+}

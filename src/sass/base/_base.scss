@@ -1,0 +1,43 @@
+@use '../abstract' as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: $color-gray--100;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+button {
+    @include buttonInputReset;
+}
+
+input:not([type='checkbox'], [type='radio']) {
+    appearance: none;
+    @include buttonInputReset;
+}

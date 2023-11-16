@@ -1,0 +1,28 @@
+// Layouts
+@use 'layout/about';
+@use 'layout/footer';
+@use 'layout/heading';
+@use 'layout/onlineOrder';
+@use 'layout/specialTreat';
+@use 'layout/testimonials';
+@use 'layout/treats';
+@use 'layout/whyUs';
+
+// Components
+@use 'components/article';
+@use 'components/button';
+@use 'components/navbar';
+@use 'components/scaledImg';
+@use 'components/pagination';
+@use 'components/preloader';
+
+// Base
+@use 'base/base';
+@use 'base/typography';
+@use 'base/utilities';
+
+// Vendor
+@use 'vendor/swiper';
+
+//Pages
+@use 'pages/birthday';

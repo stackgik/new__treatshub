@@ -1,0 +1,28 @@
+@use '../abstract' as *;
+
+.section__heading {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: $color-primary;
+    display: block;
+    position: relative;
+}
+
+.section__title {
+    font-size: 4.8rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.section__details {
+    line-height: 1.6;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}

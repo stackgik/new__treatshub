@@ -1,0 +1,12 @@
+@mixin buttonInputReset {
+    font-family: inherit;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
